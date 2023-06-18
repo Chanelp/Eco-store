@@ -82,11 +82,25 @@ section h2 {
   color: #7c6a0a;
   font-size: 2em;
 }
+section .healthcare {
+  padding-bottom: 60px;
+}
 section .healthcare h2 {
   font-weight: 300;
   padding-bottom: 60px;
 }
-section .healthcare .product-card {
+section .healthcare .card-section {
+  display: flex;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 100px;
+       column-gap: 100px;
+  row-gap: 80px;
+  flex-wrap: wrap;
+}
+section .healthcare .card-section .product-card {
   width: 15vw;
   height: auto;
   padding: 20px;
@@ -94,25 +108,29 @@ section .healthcare .product-card {
   background-color: #ffdac6;
   border-radius: 12px;
 }
-section .healthcare .product-card .icon {
+section .healthcare .card-section .product-card .icon {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   padding-bottom: 12px;
 }
-section .healthcare .product-card .icon svg {
+section .healthcare .card-section .product-card .icon svg {
   width: 28px;
   height: 28px;
 }
-section .healthcare .product-card .product-image {
+section .healthcare .card-section .product-card svg:hover {
+  cursor: pointer;
+  color: white;
+}
+section .healthcare .card-section .product-card .product-image {
   width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-section .healthcare .product-card .product-image img {
-  width: 14vw;
+section .healthcare .card-section .product-card .product-image img {
+  width: 16vw;
   height: 30vh;
   -o-object-fit: cover;
      object-fit: cover;
