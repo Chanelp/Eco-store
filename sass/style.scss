@@ -48,7 +48,7 @@ article {
   width: auto;
   padding-left: 45px;
   padding-right: 45px;
-  padding-top: 50px;
+  padding-top: 30px;
   color: $primary-text-color;
   display: flex;
   justify-content: space-between;
@@ -67,11 +67,12 @@ article {
   }
 
   p {
+    width: 70%;
     font-size: $paragraph-size;
   }
 
   button {
-    width: 14vw;
+    width: 16vw;
     padding: 20px;
     background: none;
     border-style: none;
@@ -82,12 +83,18 @@ article {
     font-weight: bold;
   }
 
+  button:hover{
+    cursor: pointer;
+    background-color: #fca118;
+  }
+
   figure {
-    width: 22vw;
+    width: 90%;
   }
 
   img {
     width: 100%;
+    height: 80%;
     border-radius: 18px;
   }
 }
@@ -104,13 +111,13 @@ section {
 
   .healthcare {
     padding-bottom: 60px;
-    
+
     h2 {
       font-weight: 300;
       padding-bottom: 60px;
     }
 
-    .card-section{
+    .card-section {
       display: flex;
       width: auto;
       height: auto;
@@ -119,46 +126,54 @@ section {
       column-gap: 100px;
       row-gap: 80px;
       flex-wrap: wrap;
+    }
+    
+    .product-card {
+      width: 15vw;
+      height: auto;
+      padding: 20px;
+      color: $primary-text-color;
+      background-color: $secundary-color;
+      border-radius: 12px;
 
-      .product-card {
-        width: 15vw;
-        height: auto;
-        padding: 20px;
-        color: $primary-text-color;
-        background-color: $secundary-color;
-        border-radius: 12px;
-  
-        .icon {
-          width: 100%;
-          display: flex;
-          justify-content: flex-end;
-          padding-bottom: 12px;
-          svg {
-            width: 28px;
-            height: 28px;
-          }
-        }
-  
-        svg:hover {
-          cursor: pointer;
-          color: white;
-        }
-  
-        .product-image {
-          width: 100%;
-          height: auto;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-  
-          img {
-            width: 16vw;
-            height: 30vh;
-            object-fit: cover;
-            border-radius: 6px;
-          }
+      .icon {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 12px;
+        svg {
+          width: 28px;
+          height: 28px;
         }
       }
+
+      svg:hover {
+        cursor: pointer;
+        color: white;
+      }
+
+      .product-image {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 16vw;
+          height: 30vh;
+          object-fit: cover;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+
+  .furniture {
+    @extend .healthcare;
+    .product-card {
+      background-color: $tertiary-color;
+      color: white;
     }
   }
 }
@@ -168,4 +183,61 @@ footer {
   background-color: $background;
   width: 100%;
   height: 250px;
+}
+
+//Responsive
+@media (max-width: 600px) {
+
+  article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+      font-size: 2em;
+    }
+
+    p{
+      width: 100%;
+      font-size: 1rem;
+      text-align: justify;
+    }
+
+    button{
+      width: 77vw;
+      padding: 14px;
+    }
+
+    figure {
+      width: 100%;
+      order: -1;
+      margin: 0;
+    }
+  
+    img {
+      width: 100%;
+      border-radius: 18px;
+      object-fit: cover;
+    }
+
+  }
+
+  .card-section {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+    justify-content: initial;
+    gap: 10px;
+  }
+
+  section .healthcare .product-card{
+    width: 90vw;
+
+    .product-image img{
+      width: 100%;
+    }
+  }
+  
 }
