@@ -83,7 +83,7 @@ article {
     font-weight: bold;
   }
 
-  button:hover{
+  button:hover {
     cursor: pointer;
     background-color: #fca118;
   }
@@ -127,7 +127,7 @@ section {
       row-gap: 80px;
       flex-wrap: wrap;
     }
-    
+
     .product-card {
       width: 15vw;
       height: auto;
@@ -185,26 +185,30 @@ footer {
   height: 250px;
 }
 
-//Responsive
-@media (max-width: 600px) {
+//Responsive - Mobile
 
-  article{
+@media (max-width: 600px) {
+  section .healthcare h2 {
+    font-size: 1.7em;
+  }
+
+  article {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    h1{
+    h1 {
       font-size: 2em;
     }
 
-    p{
+    p {
       width: 100%;
       font-size: 1rem;
       text-align: justify;
     }
 
-    button{
+    button {
       width: 77vw;
       padding: 14px;
     }
@@ -214,30 +218,19 @@ footer {
       order: -1;
       margin: 0;
     }
-  
+
     img {
       width: 100%;
       border-radius: 18px;
       object-fit: cover;
     }
-
   }
 
-  .card-section {
-    width: 100%;
-    display: grid;
-    grid-auto-flow: column;
-    overflow-x: scroll;
-    justify-content: initial;
-    gap: 10px;
-  }
-
-  section .healthcare .product-card{
+  section .healthcare .product-card {
     width: 90vw;
 
-    .product-image img{
+    .product-image img {
       width: 100%;
     }
   }
-  
 }

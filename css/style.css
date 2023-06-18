@@ -154,6 +154,9 @@ footer {
 }
 
 @media (max-width: 600px) {
+  section .healthcare h2, section .furniture h2 {
+    font-size: 1.7em;
+  }
   article {
     display: flex;
     flex-direction: column;
@@ -182,14 +185,6 @@ footer {
     border-radius: 18px;
     -o-object-fit: cover;
        object-fit: cover;
-  }
-  .card-section {
-    width: 100%;
-    display: grid;
-    grid-auto-flow: column;
-    overflow-x: scroll;
-    justify-content: initial;
-    gap: 10px;
   }
   section .healthcare .product-card, section .furniture .product-card {
     width: 90vw;
