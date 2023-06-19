@@ -6,6 +6,20 @@ $background: #fa9500;
 $font-stack: "IBM Plex Sans", sans-serif;
 $paragraph-size: 1.5rem;
 
+@mixin flexColumn($direction: null, $content : null, $align : null) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $content;
+  align-items: $align;
+}
+
+@mixin buttonStyle() {
+  button {
+    background: none;
+    border-style: none;
+  }
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -23,8 +37,7 @@ body {
 
 nav {
   width: auto;
-  display: flex;
-  justify-content: space-between;
+  @include flexColumn(null, space-between, null);
   color: $primary-text-color;
   padding: 15px;
 
@@ -36,11 +49,7 @@ nav {
   .icons {
     display: flex;
     gap: 15px;
-
-    button {
-      background: none;
-      border-style: none;
-    }
+    @include buttonStyle;
   }
 }
 
@@ -50,12 +59,10 @@ article {
   padding-right: 45px;
   padding-top: 30px;
   color: $primary-text-color;
-  display: flex;
-  justify-content: space-between;
+  @include flexColumn(null, space-between, null);
 
   .impact-section {
-    display: flex;
-    flex-direction: column;
+    @include flexColumn(column, null, null);
     padding-top: 40px;
     gap: 24px;
   }
@@ -71,11 +78,11 @@ article {
     font-size: $paragraph-size;
   }
 
+  @include buttonStyle;
+
   button {
     width: 16vw;
     padding: 20px;
-    background: none;
-    border-style: none;
     background-color: $background;
     color: white;
     border-radius: 28px;
@@ -118,11 +125,9 @@ section {
     }
 
     .card-section {
-      display: flex;
+      @include flexColumn(row, center, center);
       width: auto;
       height: auto;
-      justify-content: center;
-      align-items: center;
       column-gap: 100px;
       row-gap: 80px;
       flex-wrap: wrap;
@@ -138,8 +143,7 @@ section {
 
       .icon {
         width: 100%;
-        display: flex;
-        justify-content: flex-end;
+        @include flexColumn(null, flex-end, );
         padding-bottom: 12px;
         svg {
           width: 28px;
@@ -155,10 +159,7 @@ section {
       .product-image {
         width: 100%;
         height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
+        @include flexColumn(null, center, center);
         img {
           width: 16vw;
           height: 30vh;
@@ -193,10 +194,7 @@ footer {
   }
 
   article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexColumn(column, center, center);
 
     h1 {
       font-size: 2em;
