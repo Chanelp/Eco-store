@@ -195,6 +195,7 @@ section .about-us .mission-section .earth img, section .gallery .mission-section
   -o-object-position: center;
      object-position: center;
   border-radius: 16px;
+  cursor: pointer;
   transition: transform 0.3s;
 }
 .gallery-images img:hover {

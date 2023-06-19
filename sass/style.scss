@@ -231,6 +231,7 @@ section {
       object-fit: cover;
       object-position: center;
       border-radius: 16px;
+      cursor: pointer;
       transition: transform 0.3s;
 
       &:hover{
