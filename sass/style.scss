@@ -179,6 +179,39 @@ section {
   }
 }
 
+section {
+  .about-us{
+    padding-bottom: 60px;
+    @extend .healthcare;
+    h2{
+      font-weight: bold;
+    }
+
+    .mision-section{
+      @include flexColumn(row, space-around, center);
+
+      .earth{
+        width: 40%;
+        @include flexColumn(row);
+        gap: 40px;
+         p{
+          color: #E86424;
+          text-align: center;
+          margin: auto 0;
+         }
+
+         img{
+          object-fit: contain;
+         }
+      }
+
+      .innovation{
+        @extend .earth;
+      }
+    }
+  }
+}
+
 footer {
   $background: #fa9500;
   background-color: $background;
