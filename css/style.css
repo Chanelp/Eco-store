@@ -30,6 +30,9 @@ nav .icons button {
   background: none;
   border-style: none;
 }
+nav .icons button {
+  cursor: pointer;
+}
 
 article {
   width: auto;
@@ -173,7 +176,7 @@ section .about-us .mission-section .earth, section .gallery .mission-section .ea
   gap: 40px;
 }
 section .about-us .mission-section .earth p, section .gallery .mission-section .earth p, section .about-us .mission-section .innovation p, section .gallery .mission-section .innovation p {
-  color: #E86424;
+  color: #e86424;
   text-align: center;
   margin: auto 0;
 }
@@ -216,9 +219,10 @@ section .about-us .mission-section .earth img, section .gallery .mission-section
 .location .map img {
   width: 80vw;
 }
-.location h3, .location p {
+.location h3,
+.location p {
   font-size: 1.5rem;
-  color: #E86424;
+  color: #e86424;
 }
 
 footer {

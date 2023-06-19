@@ -7,7 +7,7 @@ $font-stack: "IBM Plex Sans", sans-serif;
 $paragraph-size: 1.5rem;
 $paddingB: 60px;
 
-@mixin flexColumn($direction: null, $content : null, $align : null) {
+@mixin flexColumn($direction: null, $content: null, $align: null) {
   display: flex;
   flex-direction: $direction;
   justify-content: $content;
@@ -51,6 +51,10 @@ nav {
     display: flex;
     gap: 15px;
     @include buttonStyle;
+
+    button {
+      cursor: pointer;
+    }
   }
 }
 
@@ -89,7 +93,7 @@ article {
     border-radius: 28px;
     font-size: 1.2rem;
     font-weight: bold;
-    &:hover{
+    &:hover {
       transform: scale(1.1);
       transition-duration: 0.3s;
     }
@@ -148,7 +152,7 @@ section {
 
       .icon {
         width: 100%;
-        @include flexColumn(null, flex-end, );
+        @include flexColumn(null, flex-end);
         padding-bottom: 12px;
         svg {
           width: 28px;
@@ -185,45 +189,45 @@ section {
 }
 
 section {
-  .about-us{
+  .about-us {
     padding-bottom: $paddingB;
     @extend .healthcare;
-    h2{
+    h2 {
       font-weight: bold;
     }
 
-    .mission-section{
+    .mission-section {
       @include flexColumn(row, space-around, center);
 
-      .earth{
+      .earth {
         width: 40%;
         @include flexColumn(row);
         gap: 40px;
-         p{
-          color: #E86424;
+        p {
+          color: #e86424;
           text-align: center;
           margin: auto 0;
-         }
+        }
 
-         img{
+        img {
           object-fit: contain;
-         }
+        }
       }
 
-      .innovation{
+      .innovation {
         @extend .earth;
       }
     }
   }
 }
 
-.gallery{
+.gallery {
   @extend .about-us;
-  &-images{
+  &-images {
     width: 100%;
     display: flex;
     justify-content: space-between;
-  
+
     img {
       aspect-ratio: 1/1;
       height: 100%;
@@ -234,30 +238,31 @@ section {
       cursor: pointer;
       transition: transform 0.3s;
 
-      &:hover{
+      &:hover {
         transform: scale(1.1);
       }
     }
   }
 }
 
-.location{
-  $text-color: #E86424;
-  h2{
+.location {
+  $text-color: #e86424;
+  h2 {
     padding-bottom: $paddingB;
     padding-top: $paddingB;
   }
-  .map{
+  .map {
     @include flexColumn(row, center, center);
     padding-bottom: 50px;
 
-    img{
+    img {
       width: 80vw;
     }
   }
 
-  h3, p{
-    font-size:$paragraph-size;
+  h3,
+  p {
+    font-size: $paragraph-size;
     color: $text-color;
   }
 }
@@ -269,16 +274,16 @@ footer {
   background-color: $background;
   color: white;
 
-  p{
+  p {
     cursor: pointer;
   }
 
-  .social-media{
+  .social-media {
     @include flexColumn(row, center, center);
     gap: 40px;
     padding: 30px;
 
-    img{
+    img {
       cursor: pointer;
     }
   }
