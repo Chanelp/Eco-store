@@ -262,10 +262,25 @@ section {
 }
 
 footer {
-  $background: #fa9500;
+  width: auto;
+  height: auto;
+  padding: 40px;
   background-color: $background;
-  width: 100%;
-  height: 250px;
+  color: white;
+
+  p{
+    cursor: pointer;
+  }
+
+  .social-media{
+    @include flexColumn(row, center, center);
+    gap: 40px;
+    padding: 30px;
+
+    img{
+      cursor: pointer;
+    }
+  }
 }
 
 //Responsive - Mobile
