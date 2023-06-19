@@ -5,6 +5,7 @@ $primary-text-color: #7c6a0a;
 $background: #fa9500;
 $font-stack: "IBM Plex Sans", sans-serif;
 $paragraph-size: 1.5rem;
+$paddingB: 60px;
 
 @mixin flexColumn($direction: null, $content : null, $align : null) {
   display: flex;
@@ -121,11 +122,11 @@ section {
   }
 
   .healthcare {
-    padding-bottom: 60px;
+    padding-bottom: $paddingB;
 
     h2 {
       font-weight: 300;
-      padding-bottom: 60px;
+      padding-bottom: $paddingB;
     }
 
     .card-section {
@@ -185,7 +186,7 @@ section {
 
 section {
   .about-us{
-    padding-bottom: 60px;
+    padding-bottom: $paddingB;
     @extend .healthcare;
     h2{
       font-weight: bold;
@@ -231,11 +232,32 @@ section {
       object-position: center;
       border-radius: 16px;
       transition: transform 0.3s;
-      
+
       &:hover{
         transform: scale(1.1);
       }
     }
+  }
+}
+
+.location{
+  $text-color: #E86424;
+  h2{
+    padding-bottom: $paddingB;
+    padding-top: $paddingB;
+  }
+  .map{
+    @include flexColumn(row, center, center);
+    padding-bottom: 50px;
+
+    img{
+      width: 80vw;
+    }
+  }
+
+  h3, p{
+    font-size:$paragraph-size;
+    color: $text-color;
   }
 }
 
